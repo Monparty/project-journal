@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav">
+            <h5>JOURNAL /</h5>
+            <h5>MENU</h5>
+        </div>
+    </nav>
+    <div class="container">
+        <section>
+            <div class="sectionTop">
+                <div class="flex">
+                    <h5>Date</h5>
+                    <input type="date" name="">
+                </div>
+                <div class="day">
+                    <div class="radio-inputs">
+                        <label class="radio">
+                            <input type="radio" name="radio">
+                            <span class="name">M</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="radio">
+                            <span class="name">T</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="radio">
+                            <span class="name">W</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="radio">
+                            <span class="name">TH</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="radio">
+                            <span class="name">F</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="radio">
+                            <span class="name">S</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="radio">
+                            <span class="name">SU</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="flex">
+                    <h5>Mood</h5>
+                    <select name="" id="">
+                        <option value="">-</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h5 class="head"><span class="tooltip" data-tooltip="Tooltip Content">Thoughts ?</span></h5>
+                <textarea oninput="autoHeight(this)" name=""></textarea>
+            </div>
+            <div>
+                <div>
+                    <h5 class="head">Maintenance Plan</h5>
+                </div>
+                <div class="boxMaList">
+                    <div class="maList">
+                        <h5>Exercise</h5>
+                        <input type="text" name="exercise">
+                    </div>
+                    <div class="maList">
+                        <h5>Mindfulness</h5>
+                        <input type="text" name="mindfulness">
+                    </div>
+                    <div class="maList">
+                        <h5>Hydration</h5>
+                        <input type="text" name="hydration">
+                    </div>
+                    <div class="maList">
+                        <h5>Relationship</h5>
+                        <input type="text" name="relationship">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div>
+                <h5 class="head">Yesterday Best Part</h5>
+                <textarea oninput="autoHeight(this)" name="ybp"></textarea>
+            </div>
+            <div>
+                <h5 class="head">Daily Advice or Quote</h5>
+                <textarea oninput="autoHeight(this)" name="daq"></textarea>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h5 class="head">Today I Am Grateful For</h5>
+                <textarea oninput="autoHeight(this)" name="grateful"></textarea>
+            </div>
+            <div>
+                <div>
+                    <h5 class="head">Rate My Life On 10</h5>
+                </div>
+                <div class="boxRateList">
+                    <div class="rateList">
+                        <h5>Sellove</h5>
+                        <input type="number" min="1" max="10" name="sellove">
+                    </div>
+                    <div class="rateList">
+                        <h5>Confident</h5>
+                        <input type="number" min="1" max="10" name="confident">
+                    </div>
+                    <div class="rateList">
+                        <h5>Relationship</h5>
+                        <input type="number" min="1" max="10" name="relationship">
+                    </div>
+                    <div class="rateList">
+                        <h5>Career</h5>
+                        <input type="number" min="1" max="10" name="career">
+                    </div>
+                    <div class="rateList">
+                        <h5>Mindfulness</h5>
+                        <input type="number" min="1" max="10" name="mindfulness">
+                    </div>
+                    <div class="rateList">
+                        <h5>Heath</h5>
+                        <input type="number" min="1" max="10" name="heath">
+                    </div>
+                    <div class="rateList">
+                        <h5>Creativity</h5>
+                        <input type="number" min="1" max="10" name="creativity">
+                    </div>
+                    <div class="rateList">
+                        <h5>Finance</h5>
+                        <input type="number" min="1" max="10" name="finance">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h5 class="head">How Can I Improve ?</h5>
+                <textarea oninput="autoHeight(this)" name="improve "></textarea>
+            </div>
+            <div>
+                <h5 class="head">Today Schedule</h5>
+                <textarea oninput="autoHeight(this)" name="schedule"></textarea>
+            </div>
+        </section>
+
+        <section style="align-items: flex-end;">
+            <div>
+                <h5 class="head">Dream Come True</h5>
+                <h5 class="subhead">Small Goals</h5>
+                <textarea oninput="autoHeight(this)" name="smallgoal "></textarea>
+            </div>
+            <div>
+                <h5 class="subhead">Big Goals</h5>
+                <textarea oninput="autoHeight(this)" name="biggoal "></textarea>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h5 class="head">20 Ideas To Achieve My Goals</h5>
+                <textarea oninput="autoHeight(this)" name="achieve"></textarea>
+            </div>
+            <div>
+                <h5 class="head">Think Outside The Box</h5>
+                <textarea oninput="autoHeight(this)" name="outside"></textarea>
+            </div>
+        </section>
+
+        <button type="submit" class="link float-on-hover">Submit</button>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,229.3C384,235,480,181,576,181.3C672,181,768,235,864,224C960,213,1056,139,1152,133.3C1248,128,1344,192,1392,224L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+:root {
+  --cream: #F6F2D4;
+  --border: 1px solid;
+}
+
+body {
+  background-color: var(--cream);
+}
+
+section {
+  display: flex;
+  gap: 30px;
+}
+
+select {
+  border-radius: 0;
+  height: 30px;
+  padding: 5px;
+  border: var(--border);
+  width: 60px;
+}
+
+.sectionTop {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.head {
+  padding: 10px;
+  border: var(--border);
+  font-weight: bold !important;
+  width: fit-content;
+  border-bottom: none;
+}
+
+nav {
+  padding: 0 20px;
+}
+
+.nav {
+  height: 90px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--border);
+
+  & h5 {
+    
+    &:hover {
+      cursor: pointer;
+      border-bottom: var(--border);
+    }
+  }
+}
+
+.borderBox {
+  border: var(--border);
+}
+
+.boxRateList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 30px;
+  border: var(--border);
+  padding: 10px;
+  width: 400px;
+
+  & .rateList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & input {
+      width: 60px !important;
+    }
+  }
+}
+
+.subhead {
+  border: var(--border);
+  border-bottom: 0;
+  padding: 10px;
+  font-weight: bold !important;
+}
+
+.boxMaList {
+  display: grid;
+  gap: 10px;
+  border: var(--border);
+  padding: 10px;
+  width: 400px;
+}
+
+input {
+  border-radius: 0;
+  height: 30px;
+  padding: 5px;
+  border: var(--border);
+  width: 100%;
+}
+
+.maList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & h5 {
+    width: 150px;
+  }
+}
+
+textarea {
+  width: 400px;
+  height: 100px;
+  border-radius: 0;
+  padding: 5px;
+
+  &:focus {
+    border: none;
+    border-radius: 0;
+  }
+}
+
+/* radio */
+.radio-inputs {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .name {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 10px;
+  width: 40px;
+  color: rgba(51, 65, 85, 1);
+  transition: all .15s ease-in-out;
+}
+
+.radio-inputs .radio input:checked + .name {
+  background-color: #fff;
+  font-weight: 600;
+}
+/* radio */
+
+/* btn */
+.link{
+    display: inline-block;
+    color: #000;
+    background:  none;
+    transition-duration: 0.3s;
+    transition: 0.3s;
+    padding: 20px 30px;
+    width: 200px;
+    text-align: center;
+    border: 1px solid;
+    cursor: pointer;
+  }
+  
+  .float-on-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px; 
+  }
+/* btn */
+
+/* tooltip */
+.tooltip {
+  font-weight: bold;
+}
+.tooltip:hover {
+    position: relative;
+    border-bottom: 1px dashed black;
+  }
+  
+  /* Tooltip box */
+  .tooltip:before {
+    content: attr(data-tooltip); 
+    position: absolute;
+    width: 100px;
+    background-color: #062B45;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    line-height: 1.2;
+    border-radius: 3px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .6s;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    font-size: 0.75em;
+  }
+  
+  .tooltip:hover:before, .tooltip:hover:after {
+    opacity: 1;
+  }
+/* tooltip */
