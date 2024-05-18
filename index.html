@@ -16,187 +16,191 @@
             <h5>MENU</h5>
         </div>
     </nav>
-    <div class="container">
-        <section>
-            <div class="sectionTop">
-                <div class="flex">
-                    <h5>Date</h5>
-                    <input type="date" name="">
-                </div>
-                <div class="day">
-                    <div class="radio-inputs">
-                        <label class="radio">
-                            <input type="radio" name="radio">
-                            <span class="name">M</span>
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="radio">
-                            <span class="name">T</span>
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="radio">
-                            <span class="name">W</span>
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="radio">
-                            <span class="name">TH</span>
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="radio">
-                            <span class="name">F</span>
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="radio">
-                            <span class="name">S</span>
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="radio">
-                            <span class="name">SU</span>
-                        </label>
+    <form action="uindex.php" method="post">
+        <div class="container">
+            <section>
+                <div class="sectionTop">
+                    <div class="flex">
+                        <h5>Date</h5>
+                        <input type="date" name="date">
+                    </div>
+                    <div class="day">
+                        <div class="radio-inputs">
+                            <label class="radio">
+                                <input type="radio" name="day[]">
+                                <span class="name">M</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="day[]">
+                                <span class="name">T</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="day[]">
+                                <span class="name">W</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="day[]">
+                                <span class="name">TH</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="day[]">
+                                <span class="name">F</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="day[]">
+                                <span class="name">S</span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="day[]">
+                                <span class="name">SU</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <h5>Mood</h5>
+                        <select name="mood">
+                            <option value="">-</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
                     </div>
                 </div>
-                <div class="flex">
-                    <h5>Mood</h5>
-                    <select name="" id="">
-                        <option value="">-</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section>
-            <div>
-                <h5 class="head"><span class="tooltip" data-tooltip="Tooltip Content">Thoughts ?</span></h5>
-                <textarea oninput="autoHeight(this)" name=""></textarea>
-            </div>
-            <div>
+            <section>
                 <div>
-                    <h5 class="head">Maintenance Plan</h5>
+                    <h5 class="head"><span class="tooltip" data-tooltip="คุณคิดอะไรอยู่ตอนนี้">Thoughts ?</span></h5>
+                    <textarea oninput="autoHeight(this)" name="thoughts"></textarea>
                 </div>
-                <div class="boxMaList">
-                    <div class="maList">
-                        <h5>Exercise</h5>
-                        <input type="text" name="exercise">
-                    </div>
-                    <div class="maList">
-                        <h5>Mindfulness</h5>
-                        <input type="text" name="mindfulness">
-                    </div>
-                    <div class="maList">
-                        <h5>Hydration</h5>
-                        <input type="text" name="hydration">
-                    </div>
-                    <div class="maList">
-                        <h5>Relationship</h5>
-                        <input type="text" name="relationship">
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section>
-            <div>
-                <h5 class="head">Yesterday Best Part</h5>
-                <textarea oninput="autoHeight(this)" name="ybp"></textarea>
-            </div>
-            <div>
-                <h5 class="head">Daily Advice or Quote</h5>
-                <textarea oninput="autoHeight(this)" name="daq"></textarea>
-            </div>
-        </section>
-
-        <section>
-            <div>
-                <h5 class="head">Today I Am Grateful For</h5>
-                <textarea oninput="autoHeight(this)" name="grateful"></textarea>
-            </div>
-            <div>
                 <div>
-                    <h5 class="head">Rate My Life On 10</h5>
-                </div>
-                <div class="boxRateList">
-                    <div class="rateList">
-                        <h5>Sellove</h5>
-                        <input type="number" min="1" max="10" name="sellove">
+                    <div>
+                        <h5 class="head"><span class="tooltip" data-tooltip="แผนการบำรุงรักษา">Maintenance Plan</span></h5>
                     </div>
-                    <div class="rateList">
-                        <h5>Confident</h5>
-                        <input type="number" min="1" max="10" name="confident">
-                    </div>
-                    <div class="rateList">
-                        <h5>Relationship</h5>
-                        <input type="number" min="1" max="10" name="relationship">
-                    </div>
-                    <div class="rateList">
-                        <h5>Career</h5>
-                        <input type="number" min="1" max="10" name="career">
-                    </div>
-                    <div class="rateList">
-                        <h5>Mindfulness</h5>
-                        <input type="number" min="1" max="10" name="mindfulness">
-                    </div>
-                    <div class="rateList">
-                        <h5>Heath</h5>
-                        <input type="number" min="1" max="10" name="heath">
-                    </div>
-                    <div class="rateList">
-                        <h5>Creativity</h5>
-                        <input type="number" min="1" max="10" name="creativity">
-                    </div>
-                    <div class="rateList">
-                        <h5>Finance</h5>
-                        <input type="number" min="1" max="10" name="finance">
+                    <div class="boxMaList">
+                        <div class="maList">
+                            <h5><span class="tooltip" data-tooltip="ออกกำลังกาย">Exercise</span></h5>
+                            <input type="text" name="maExercise">
+                        </div>
+                        <div class="maList">
+                            <h5><span class="tooltip" data-tooltip="การมีสติ">Mindfulness</span></h5>
+                            <input type="text" name="maMindfulness">
+                        </div>
+                        <div class="maList">
+                            <h5><span class="tooltip" data-tooltip="การดื่มน้ำ">Hydration</span></h5>
+                            <input type="text" name="maHydration">
+                        </div>
+                        <div class="maList">
+                            <h5><span class="tooltip" data-tooltip="ความสัมพันธ์">Relationship</span></h5>
+                            <input type="text" name="maRelationship">
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            
+            <section>
+                <div>
+                    <h5 class="head"><span class="tooltip" data-tooltip="รู้สึกดีกับอะไรในเมื่อวานบ้าง">Yesterday Best Part</span></h5>
+                    <textarea oninput="autoHeight(this)" name="yesterdayBestPart"></textarea>
+                </div>
+                <div>
+                    <h5 class="head"><span class="tooltip" data-tooltip="คำแนะนำประจำวันหรือคำคม">Daily Advice or Quote</span></h5>
+                    <textarea oninput="autoHeight(this)" name="DailyAdviceQuote"></textarea>
+                </div>
+            </section>
 
-        <section>
-            <div>
-                <h5 class="head">How Can I Improve ?</h5>
-                <textarea oninput="autoHeight(this)" name="improve "></textarea>
-            </div>
-            <div>
-                <h5 class="head">Today Schedule</h5>
-                <textarea oninput="autoHeight(this)" name="schedule"></textarea>
-            </div>
-        </section>
+            <section>
+                <div>
+                    <h5 class="head"><span class="tooltip" data-tooltip="วันนี้คุณรู้สึกดีกับอะไร">Today I Am Grateful For</span></h5>
+                    <textarea oninput="autoHeight(this)" name="TodayGratefulFor"></textarea>
+                </div>
+                <div>
+                    <div>
+                        <h5 class="head"><span class="tooltip" data-tooltip="ให้คะแนนชีวิตของคุณ">Rate My Life On 10</span></h5>
+                    </div>
+                    <div class="boxRateList">
+                        <div class="rateList">
+                            <h5><span class="tooltip" data-tooltip="การรักตัวเอง">Sellove</span></h5>
+                            <input type="number" min="1" max="10" name="rmlSellove">
+                        </div>
+                        <div class="rateList">
+                            <h5><span class="tooltip" data-tooltip="ความมั่นใจ">Confident</span></h5>
+                            <input type="number" min="1" max="10" name="rmlConfident">
+                        </div>
+                        <div class="rateList">
+                            <h5><span class="tooltip" data-tooltip="ความสัมพันธ์">Relationship</span></h5>
+                            <input type="number" min="1" max="10" name="rmlRelationship">
+                        </div>
+                        <div class="rateList">
+                            <h5><span class="tooltip" data-tooltip="งานเป็นยังไง">Career</span></h5>
+                            <input type="number" min="1" max="10" name="rmlCareer">
+                        </div>
+                        <div class="rateList">
+                            <h5><span class="tooltip" data-tooltip="ความมีสติ">Mindfulness</span></h5>
+                            <input type="number" min="1" max="10" name="rmlMindfulness">
+                        </div>
+                        <div class="rateList">
+                            <h5><span class="tooltip" data-tooltip="สุขภาพ">Heath</span></h5>
+                            <input type="number" min="1" max="10" name="rmlHeath">
+                        </div>
+                        <div class="rateList">
+                            <h5><span class="tooltip" data-tooltip="ความคิดสร้างสรรค์">Creativity</span></h5>
+                            <input type="number" min="1" max="10" name="rmlCreativity">
+                        </div>
+                        <div class="rateList">
+                            <h5><span class="tooltip" data-tooltip="การเงิน">Finance</span></h5>
+                            <input type="number" min="1" max="10" name="rmlFinance">
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <section style="align-items: flex-end;">
-            <div>
-                <h5 class="head">Dream Come True</h5>
-                <h5 class="subhead">Small Goals</h5>
-                <textarea oninput="autoHeight(this)" name="smallgoal "></textarea>
-            </div>
-            <div>
-                <h5 class="subhead">Big Goals</h5>
-                <textarea oninput="autoHeight(this)" name="biggoal "></textarea>
-            </div>
-        </section>
+            <section>
+                <div>
+                    <h5 class="head"><span class="tooltip" data-tooltip="ต้องปรับปรุงเรื่องอะไร">How Can I Improve ?</span></h5>
+                    <textarea oninput="autoHeight(this)" name="howCanImprove"></textarea>
+                </div>
+                <div>
+                    <h5 class="head"><span class="tooltip" data-tooltip="วันนี้ต้องทำอะไรบ้าง">Today Schedule</span></h5>
+                    <textarea oninput="autoHeight(this)" name="todaySchedule"></textarea>
+                </div>
+            </section>
 
-        <section>
-            <div>
-                <h5 class="head">20 Ideas To Achieve My Goals</h5>
-                <textarea oninput="autoHeight(this)" name="achieve"></textarea>
-            </div>
-            <div>
-                <h5 class="head">Think Outside The Box</h5>
-                <textarea oninput="autoHeight(this)" name="outside"></textarea>
-            </div>
-        </section>
+            <section style="align-items: flex-end;">
+                <div>
+                    <h5 class="head"><span class="tooltip" data-tooltip="ความฝันของคุณ">Dream Come True</span></h5>
+                    <h5 class="subhead"><span class="tooltip" data-tooltip="เป้าหมายเล็ก">Small Goals</span></h5>
+                    <textarea oninput="autoHeight(this)" name="dctSmallGoals"></textarea>
+                </div>
+                <div>
+                    <h5 class="subhead"><span class="tooltip" data-tooltip="เป้าหมายใหญ่">Big Goals</span></h5>
+                    <textarea oninput="autoHeight(this)" name="dctBigGoals"></textarea>
+                </div>
+            </section>
 
-        <button type="submit" class="link float-on-hover">Submit</button>
-    </div>
+            <section>
+                <div>
+                    <h5 class="head"><span class="tooltip" data-tooltip="20 วิธีบรรลุเป้าหมาย">20 Ideas To Achieve My Goals</span></h5>
+                    <textarea oninput="autoHeight(this)" name="ideasToGoals"></textarea>
+                </div>
+                <div>
+                    <h5 class="head"><span class="tooltip" data-tooltip="ลองคิดนอกกรอบ">Think Outside The Box</span></h5>
+                    <textarea oninput="autoHeight(this)" name="thinkOutside"></textarea>
+                </div>
+            </section>
+
+            <section class="sectionBtn">
+                <button type="submit" class="link float-on-hover">Submit</button>
+            </section>
+        </div>
+    </form>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,229.3C384,235,480,181,576,181.3C672,181,768,235,864,224C960,213,1056,139,1152,133.3C1248,128,1344,192,1392,224L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 
     <script src="script.js"></script>

@@ -58,6 +58,10 @@ select {
   font-weight: bold !important;
   width: fit-content;
   border-bottom: none;
+
+  & .tooltip {
+    font-weight: bold;
+  }
 }
 
 nav {
@@ -198,9 +202,6 @@ textarea {
 /* btn */
 
 /* tooltip */
-.tooltip {
-  font-weight: bold;
-}
 .tooltip:hover {
     position: relative;
     border-bottom: 1px dashed black;
@@ -210,7 +211,6 @@ textarea {
   .tooltip:before {
     content: attr(data-tooltip); 
     position: absolute;
-    width: 100px;
     background-color: #062B45;
     color: #fff;
     text-align: center;
@@ -230,3 +230,34 @@ textarea {
     opacity: 1;
   }
 /* tooltip */
+
+.sectionBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+
+  .sectionTop {
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section {
+      flex-direction: column;
+  }
+
+  .sectionBtn {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  input[type="date"] {
+    width: 150px;
+  }
+}
