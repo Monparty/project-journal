@@ -8,7 +8,7 @@
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 20px;
 }
 
 :root {
@@ -223,7 +223,7 @@ textarea {
   border-radius: 0;
   padding: 5px;
   resize: none;
-  overflow: hidden;
+  overflow: auto;
 
   &:read-only {
     background-color: var(--cream);
