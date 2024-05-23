@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav">
+            <h5 onclick="logo()">JOURNAL /</h5>
+            <select class="selectMenu" onchange="changeSelect2()">
+                <option>Home</option>
+                <option selected>History</option>
+            </select>
+        </div>
+    </nav>
+    <div class="containerTable">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td width="14%">#</td>
+                    <td>Date</td>
+                    <td width="20%">Day</td>
+                    <td width="20%">Mood</td>
+                    <td width="10%"></td>
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+                $count = 1;
+                foreach($results as $row) { ?>
+                <tr align="center">
+                    <td><?=$count++;?><input type="hidden" value="<?=$row['id']?>" id="id"></td>
+                    <td><?=date_format(date_create($row['date']), 'd/m/Y')?></td>
+                    <td><?=$row['day']?></td>
+                    <td><?=$row['mood']?></td>
+                    <td><a href="eindex.php?id=<?=$row['id']?>">&#187;</a></td>
+                </tr>
+            <?php } ?>
+            </tbody>
+        </table>
+    </div>
+    <svg style="position: fixed; bottom: 0; z-index: -1;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,229.3C384,235,480,181,576,181.3C672,181,768,235,864,224C960,213,1056,139,1152,133.3C1248,128,1344,192,1392,224L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+<script src="script.js"></script>
+</body>
+</html>

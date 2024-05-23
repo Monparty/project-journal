@@ -31,7 +31,79 @@ select {
   padding: 5px;
   border: var(--border);
   width: 60px;
+
+  &:disabled {
+    background-color: var(--cream);
+    color: black;
+    opacity: 1;
+  }
 }
+
+.selectMenu {
+  width: fit-content;
+  border: none;
+  background-color: var(--cream);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size:24px;
+
+  &:hover {
+    color: #E7700D;
+  }
+}
+
+/* table */
+.containerTable {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 1rem;
+
+  & table, tr, td {
+      border-bottom: 1px solid #E7700D;
+  }
+  
+  & .table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 10em;
+  }
+  
+  & thead {
+      background: #FAECC6;
+      text-align: center;
+      height: 30px;
+      position: sticky;
+      top: 0;
+      
+      & td {
+          font-weight: bold;
+      }
+  }
+
+  & tbody {
+      background: var(--cream);
+      height: 30px;
+
+      & td {
+          padding: 10px 5px;
+      }
+      tr {
+
+          &:hover {
+              transition: .2s;
+              background: #FAECC6;
+          }
+      }
+  }
+}
+/* table */
 
 .sectionTop {
   display: flex;
@@ -129,6 +201,10 @@ input {
   padding: 5px;
   border: var(--border);
   width: 100%;
+
+  &:read-only {
+    background-color: var(--cream);
+  }
 }
 
 .maList {
@@ -148,6 +224,10 @@ textarea {
   padding: 5px;
   resize: none;
   overflow: hidden;
+
+  &:read-only {
+    background-color: var(--cream);
+  }
 }
 
 /* radio */
@@ -234,8 +314,6 @@ textarea {
   display: flex;
   justify-content: flex-end;
 }
-
-
 
 @media only screen and (max-width: 480px) {
 

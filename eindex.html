@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav">
+            <h5 onclick="logo()">JOURNAL /</h5>
+            <select class="selectMenu" onchange="changeSelect2()">
+                <option>Home</option>
+                <option selected>History</option>
+            </select>
+        </div>
+    </nav>
+    <div class="container">
+        <section>
+            <div class="sectionTop">
+                <div class="flex">
+                    <h5><span class="tooltip" data-tooltip="วันที่">Date</span></h5>
+                    <input type="date" name="date" readonly value="<?=$results[0]['date'];?>">
+                </div>
+                <div class="day">
+                    <div class="radio-inputs">
+                        <label class="radio">
+                            <input type="radio" name="day[]" value="M" <?php echo ($results[0]['day']=='M') ? 'checked' : ''; ?> disabled>
+                            <span class="name">M</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="day[]" value="T" <?php echo ($results[0]['day']=='T') ? 'checked' : ''; ?> disabled>
+                            <span class="name">T</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="day[]" value="W" <?php echo ($results[0]['day']=='W') ? 'checked' : ''; ?> disabled>
+                            <span class="name">W</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="day[]" value="TH" <?php echo ($results[0]['day']=='TH') ? 'checked' : ''; ?> disabled>
+                            <span class="name">TH</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="day[]" value="F" <?php echo ($results[0]['day']=='F') ? 'checked' : ''; ?> disabled>
+                            <span class="name">F</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="day[]" value="S" <?php echo ($results[0]['day']=='S') ? 'checked' : ''; ?> disabled>
+                            <span class="name">S</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="day[]" value="SU" <?php echo ($results[0]['day']=='SU') ? 'checked' : ''; ?> disabled>
+                            <span class="name">SU</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="flex">
+                    <h5><span class="tooltip" data-tooltip="อารมณ์">Mood</span></h5>
+                    <select name="mood" disabled>
+                        <option value=""><?=$results[0]['mood'];?></option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h5 class="head"><span class="tooltip" data-tooltip="คุณคิดอะไรอยู่ตอนนี้">Thoughts ?</span></h5>
+                <textarea name="thoughts" readonly><?=$results[0]['thoughts'];?></textarea>
+            </div>
+            <div>
+                <div>
+                    <h5 class="head"><span class="tooltip" data-tooltip="แผนการดูแลตัวเอง">Maintenance Plan</span></h5>
+                </div>
+                <div class="boxMaList">
+                    <div class="maList">
+                        <h5><span class="tooltip" data-tooltip="ออกกำลังกาย">Exercise</span></h5>
+                        <input type="text" name="maExercise" readonly value="<?=$results[0]['maExercise'];?>">
+                    </div>
+                    <div class="maList">
+                        <h5><span class="tooltip" data-tooltip="การมีสติ">Mindfulness</span></h5>
+                        <input type="text" name="maMindfulness" readonly value="<?=$results[0]['maMindfulness'];?>">
+                    </div>
+                    <div class="maList">
+                        <h5><span class="tooltip" data-tooltip="การดื่มน้ำ">Hydration</span></h5>
+                        <input type="text" name="maHydration" readonly value="<?=$results[0]['maHydration'];?>">
+                    </div>
+                    <div class="maList">
+                        <h5><span class="tooltip" data-tooltip="ความสัมพันธ์">Relationship</span></h5>
+                        <input type="text" name="maRelationship" readonly value="<?=$results[0]['maRelationship'];?>">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <div>
+                <h5 class="head"><span class="tooltip" data-tooltip="รู้สึกดีกับอะไรในเมื่อวานบ้าง">Yesterday Best Part</span></h5>
+                <textarea name="yesterdayBestPart" readonly><?=$results[0]['yesterdayBestPart'];?></textarea>
+            </div>
+            <div>
+                <h5 class="head"><span class="tooltip" data-tooltip="คำแนะนำประจำวันหรือคำคม">Daily Advice or Quote</span></h5>
+                <textarea name="dailyAdviceQuote" readonly><?=$results[0]['dailyAdviceQuote'];?></textarea>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h5 class="head"><span class="tooltip" data-tooltip="วันนี้คุณรู้สึกดีกับอะไร">Today I Am Grateful For</span></h5>
+                <textarea name="todayGratefulFor" readonly><?=$results[0]['todayGratefulFor'];?></textarea>
+            </div>
+            <div>
+                <div>
+                    <h5 class="head"><span class="tooltip" data-tooltip="ให้คะแนนชีวิตของคุณ">Rate My Life On 10</span></h5>
+                </div>
+                <div class="boxRateList">
+                    <div class="rateList">
+                        <h5><span class="tooltip" data-tooltip="การรักตัวเอง">Sellove</span></h5>
+                        <input type="number" name="rmlSellove" readonly value="<?=$results[0]['rmlSellove'];?>">
+                    </div>
+                    <div class="rateList">
+                        <h5><span class="tooltip" data-tooltip="ความมั่นใจ">Confident</span></h5>
+                        <input type="number" name="rmlConfident" readonly value="<?=$results[0]['rmlConfident'];?>">
+                    </div>
+                    <div class="rateList">
+                        <h5><span class="tooltip" data-tooltip="ความสัมพันธ์">Relationship</span></h5>
+                        <input type="number" name="rmlRelationship" readonly value="<?=$results[0]['rmlRelationship'];?>">
+                    </div>
+                    <div class="rateList">
+                        <h5><span class="tooltip" data-tooltip="งานเป็นยังไง">Career</span></h5>
+                        <input type="number" name="rmlCareer" readonly value="<?=$results[0]['rmlCareer'];?>">
+                    </div>
+                    <div class="rateList">
+                        <h5><span class="tooltip" data-tooltip="ความมีสติ">Mindfulness</span></h5>
+                        <input type="number" name="rmlMindfulness" readonly value="<?=$results[0]['rmlMindfulness'];?>">
+                    </div>
+                    <div class="rateList">
+                        <h5><span class="tooltip" data-tooltip="สุขภาพ">Heath</span></h5>
+                        <input type="number" name="rmlHeath" readonly value="<?=$results[0]['rmlHeath'];?>">
+                    </div>
+                    <div class="rateList">
+                        <h5><span class="tooltip" data-tooltip="ความคิดสร้างสรรค์">Creativity</span></h5>
+                        <input type="number" name="rmlCreativity" readonly value="<?=$results[0]['rmlCreativity'];?>">
+                    </div>
+                    <div class="rateList">
+                        <h5><span class="tooltip" data-tooltip="การเงิน">Finance</span></h5>
+                        <input type="number" name="rmlFinance" readonly value="<?=$results[0]['rmlFinance'];?>">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h5 class="head"><span class="tooltip" data-tooltip="ต้องปรับปรุงเรื่องอะไร">How Can I Improve ?</span></h5>
+                <textarea name="howCanImprove" readonly><?=$results[0]['howCanImprove'];?></textarea>
+            </div>
+            <div>
+                <h5 class="head"><span class="tooltip" data-tooltip="วันนี้ต้องทำอะไรบ้าง">Today Schedule</span></h5>
+                <textarea name="todaySchedule" readonly><?=$results[0]['todaySchedule'];?></textarea>
+            </div>
+        </section>
+
+        <section style="align-items: flex-end;">
+            <div>
+                <h5 class="head"><span class="tooltip" data-tooltip="ความฝันของคุณ">Dream Come True</span></h5>
+                <h5 class="subhead"><span class="tooltip" data-tooltip="เป้าหมายเล็ก">Small Goals</span></h5>
+                <textarea name="dctSmallGoals" readonly><?=$results[0]['dctSmallGoals'];?></textarea>
+            </div>
+            <div>
+                <h5 class="subhead"><span class="tooltip" data-tooltip="เป้าหมายใหญ่">Big Goals</span></h5>
+                <textarea name="dctBigGoals" readonly><?=$results[0]['dctBigGoals'];?></textarea>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h5 class="head"><span class="tooltip" data-tooltip="20 วิธีบรรลุเป้าหมาย">20 Ideas To Achieve My Goals</span></h5>
+                <textarea name="ideasToGoals" readonly><?=$results[0]['ideasToGoals'];?></textarea>
+            </div>
+            <div>
+                <h5 class="head"><span class="tooltip" data-tooltip="ลองคิดนอกกรอบ">Think Outside The Box</span></h5>
+                <textarea name="thinkOutside" readonly><?=$results[0]['thinkOutside'];?></textarea>
+            </div>
+        </section>
+
+        <section class="sectionBtn">
+            <button type="submit" class="link float-on-hover" onclick="history.back()">Back</button>
+        </section>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,229.3C384,235,480,181,576,181.3C672,181,768,235,864,224C960,213,1056,139,1152,133.3C1248,128,1344,192,1392,224L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+
+<script src="script.js"></script>
+</body>
+</html>

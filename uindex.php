@@ -61,7 +61,7 @@ $stmt->bindParam(":thinkOutside", $thinkOutside);
 
 if ($stmt->execute()) {
     echo "<script>
-        alert('บันทึกข้อมูลแล้ว');
+        alert('Record completed');
         window.location.href = 'index.html';
     </script>";
 } else {

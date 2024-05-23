@@ -1,5 +1,5 @@
 function autoHeight(element) {
-  element.style.height = "100px";
+  element.style.height = "130px";
   element.style.height = (element.scrollHeight) + "px";
 }
 
@@ -37,3 +37,15 @@ if (isDay < 10) isDay = "0" + isDay;
 
 var today = year + "-" + month + "-" + isDay;
 document.getElementById('toDay').value = today;
+
+function changeSelect1() {
+    window.location.href = 'journalList.php';
+}
+
+function changeSelect2() {
+    window.location.href = 'index.html';
+}
+
+function logo() {
+    window.location.href = 'index.html';
+}
